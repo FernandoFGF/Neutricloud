@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>calendarr</class>
+ <widget class="QMainWindow" name="calendarr">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Neutricloud</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #4f7f8f;  /* Fondo azul verdoso para la ventana */
+    color: #333333;  /* Texto oscuro para el fondo azul */
+    font-family: &quot;Arial&quot;, sans-serif;
+    font-size: 16px;  /* Tamaño de fuente más grande para toda la aplicación */
+}
+
+QLabel {
+    color: #a8d8a8;  /* Verde claro para el texto de los labels */
+    font-size: 18px;  /* Tamaño de fuente más grande en los labels */
+    font-weight: bold;
+}
+
+QPushButton {
+    background-color: #6baed6;  /* Azul suave para los botones */
+    color: white;
+    border: 2px solid #4f7f8f;  /* Borde del botón en color azul verdoso */
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 25px;  /* Tamaño de fuente más grande en los botones */
+}
+
+QPushButton:hover {
+    background-color: #4f7f8f;  /* Al pasar el ratón se vuelve más oscuro */
+    color: white;
+    border-color: #6baed6;
+}
+
+QPushButton:pressed {
+    background-color: #3b6e7d;  /* Cuando se presiona, un tono más oscuro */
+}
+
+QLineEdit {
+    background-color: #e0f7fa;  /* Fondo suave de color verde claro para los inputs */
+    border: 1px solid #4f7f8f;  /* Borde verde para los campos de texto */
+    color: #333333;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 16px;  /* Tamaño de fuente más grande en los inputs */
+}
+
+QCheckBox {
+    color: #a8d8a8;  /* Verde claro para el texto del checkbox */
+    font-size: 16px;  /* Tamaño de fuente más grande en el checkbox */
+}
+
+QRadioButton {
+    color: #a8d8a8;  /* Verde claro para el texto del radiobutton */
+    font-size: 16px;  /* Tamaño de fuente más grande en el radiobutton */
+}
+
+QComboBox {
+    background-color: #e0f7fa;  /* Fondo verde claro */
+    border: 1px solid #4f7f8f;  /* Borde del combobox */
+    color: #333333;
+    font-size: 16px;  /* Tamaño de fuente más grande en el combobox */
+    padding: 8px;
+}
+
+QComboBox:hover {
+    border-color: #6baed6;  /* Borde azul claro cuando se pasa el ratón */
+}
+
+QScrollBar {
+    background-color: #e0f7fa;  /* Fondo verde claro para la barra de desplazamiento */
+    border: 1px solid #4f7f8f;  /* Borde azul verdoso */
+}
+
+QScrollBar::handle {
+    background-color: #6baed6;  /* Color del control de la barra de desplazamiento */
+}
+
+QScrollBar::handle:hover {
+    background-color: #4f7f8f;  /* Color más oscuro cuando se pasa el ratón */
+}
+
+QTabWidget::pane {
+    border: 1px solid #4f7f8f;  /* Borde para los paneles de las pestañas */
+}
+
+QTabBar::tab {
+    background-color: #6baed6;  /* Fondo azul claro para las pestañas */
+    color: white;
+    padding: 12px;
+}
+
+QTabBar::tab:selected {
+    background-color: #4f7f8f;  /* Fondo azul oscuro para la pestaña seleccionada */
+}
+
+QSlider {
+    background-color: #e0f7fa;  /* Fondo verde claro */
+    border: 1px solid #4f7f8f;  /* Borde azul verdoso */
+}
+
+QSlider::handle {
+    background-color: #6baed6;  /* Color del control deslizante */
+    border: 1px solid #4f7f8f;
+}
+
+
+QTabWidget::pane {
+    border: 1px solid #4f7f8f;  /* Borde para los paneles de las pestañas */
+}
+
+QTabBar::tab {
+    background-color: #6baed6;  /* Fondo azul claro para las pestañas */
+    color: white;
+    padding: 10px;
+}
+
+QTabBar::tab:selected {
+    background-color: #4f7f8f;  /* Fondo azul oscuro para la pestaña seleccionada */
+}
+
+QSlider {
+    background-color: #e0f7fa;  /* Fondo verde claro */
+    border: 1px solid #4f7f8f;  /* Borde azul verdoso */
+}
+
+QSlider::handle {
+    background-color: #6baed6;  /* Color del control deslizante */
+    border: 1px solid #4f7f8f;
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>785</width>
+      <height>133</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0,0,0,0">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetFixedSize</enum>
+     </property>
+     <item>
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>27</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_logo">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>230</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>230</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../resources/resources.qrc">:/resources/logo.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>25</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_home">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../resources/resources.qrc">:/resources/home.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>75</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_back">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../resources/resources.qrc">:/resources/back.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_refresh">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../resources/resources.qrc">:/resources/refresh.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QCalendarWidget" name="calendarWidget">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>155</y>
+      <width>781</width>
+      <height>441</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resources/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
